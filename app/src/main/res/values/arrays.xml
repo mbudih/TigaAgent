@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ld_activityScreenTitles">
+        <item>Menu_1</item>
+        <item>Menu_2</item>
+        <item>Menu_3</item>
+        <item>Menu_4</item>
+        <item>Menu_5</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_home_32dp</item>
+        <item>@drawable/ic_home_32dp</item>
+        <item>@drawable/ic_home_32dp</item>
+        <item>@drawable/ic_home_32dp</item>
+        <item>@drawable/ic_home_32dp</item>
+    </array>
+</resources>

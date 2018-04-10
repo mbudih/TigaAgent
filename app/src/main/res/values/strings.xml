@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Agen Tiga</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="balance">Balance</string>
+    <string name="balance_currency">$</string>
+    <string name="balance_amount">532.8</string>
+</resources>

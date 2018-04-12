@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "672170029647",
+    "firebase_url": "https://pertamina-agent.firebaseio.com",
+    "project_id": "pertamina-agent",
+    "storage_bucket": "pertamina-agent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672170029647:android:f6fc4aab99408bd2",
+        "android_client_info": {
+          "package_name": "com.tiga.agent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672170029647-3je6tj7d95suvmtsn3u1l56q0bnv9fgl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYLXPEbcAxLixnmoQAxbAgjfberzx3FZI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    android:text="user.omc@mail.com"
+                    android:text="user.tiga@mail.com"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/c_blue_dark" />
             </android.support.design.widget.TextInputLayout>

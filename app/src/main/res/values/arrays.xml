@@ -2,7 +2,7 @@
 <resources>
     <string-array name="ld_activityScreenTitles">
         <item>Menu_1</item>
-        <item>Menu_2</item>
+        <item>STOK</item>
         <item>Menu_3</item>
         <item>Menu_4</item>
         <item>Menu_5</item>

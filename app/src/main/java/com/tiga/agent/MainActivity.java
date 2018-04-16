@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.tiga.fragment.AccountFragment;
+import com.tiga.fragment.StockFragment;
 import com.tiga.menu.DrawerAdapter;
 import com.tiga.menu.DrawerItem;
 import com.tiga.menu.SimpleItem;
@@ -56,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         screenTitles = loadScreenTitles();
 
         DrawerAdapter adapter = new DrawerAdapter(Arrays.asList(
-                createItemFor(MENU_1),
-                createItemFor(MENU_2).setChecked(true),
+                createItemFor(MENU_1).setChecked(true),
+                createItemFor(MENU_2),
                 createItemFor(MENU_3),
                 createItemFor(MENU_4),
                 createItemFor(MENU_5)
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
 
-        adapter.setSelected(MENU_2);
+        adapter.setSelected(MENU_1);
     }
 
     @Override
@@ -82,8 +83,8 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 break;
             }
             case MENU_2: {
-                toolbar.setTitle("Menu 2");
-                selectedScreen = AccountFragment.createFor(screenTitles[position]);
+                toolbar.setTitle("STOK");
+                selectedScreen = StockFragment.createFor(screenTitles[position]);
                 break;
             }
             case MENU_3: {

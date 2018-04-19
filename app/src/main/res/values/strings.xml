@@ -7,4 +7,8 @@
     <string name="balance">Balance</string>
     <string name="balance_currency">$</string>
     <string name="balance_amount">532.8</string>
+
+
+    <string name="beli_subsidi">SUBSIDI</string>
+    <string name="beli_non_subsidi">NON-SUBSIDI</string>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/c_blue</color>
-    <color name="colorPrimaryDark">@color/c_blue_dark</color>
-    <color name="colorAccent">@color/c_blue_dark</color>
+    <color name="colorPrimary">@color/c_green_soft</color>
+    <color name="colorPrimaryDark">@color/c_green_dark</color>
+    <color name="colorAccent">@color/c_green</color>
 
     <color name="c_white">#FFFFFF</color>
     <color name="c_black">#000000</color>
@@ -17,9 +17,9 @@
     <color name="c_yellow">#FDCD3F</color>
     <color name="c_yellow_soft">#FEDC38</color>
     <color name="c_yellow_dark">#FDB60D</color>
-    <color name="c_green">#66B847</color>
-    <color name="c_green_dark">#1C8575</color>
-    <color name="c_green_soft">#9BDACF</color>
+    <color name="c_green">#259b24</color>
+    <color name="c_green_dark">#154515</color>
+    <color name="c_green_soft">#abdb5c</color>
 
     <color name="c_grey">#F4F4F4</color>
 

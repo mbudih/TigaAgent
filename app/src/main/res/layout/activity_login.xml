@@ -8,35 +8,41 @@
     tools:context=".LoginActivity">
 
     <ImageView
+        android:id="@+id/img_3"
         android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img3"/>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/img_3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
         android:text="@string/app_name"
+        android:textStyle="bold|italic"
         android:textColor="@color/c_white"
-        android:textSize="32sp" />
+        android:textSize="26sp" />
 
     <TextView
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:text="@string/app_name"
+        android:text="@string/app_subname"
         android:textColor="@color/c_white"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"/>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="272dp"
-        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle"
         android:layout_gravity="center"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
@@ -55,7 +61,7 @@
                 android:layout_marginLeft="4dp"
                 android:text="User Login"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textColor="@color/c_blue" />
+                android:textColor="@color/colorPrimary" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/til_username"
@@ -70,7 +76,7 @@
                     android:hint="@string/email"
                     android:text="user.tiga@mail.com"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/c_blue_dark" />
+                    android:textColor="@color/colorPrimary" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -87,14 +93,18 @@
                     android:hint="@string/password"
                     android:text="password"
                     android:inputType="textPassword"
-                    android:textColor="@color/c_blue_dark" />
+                    android:textColor="@color/colorPrimary" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/bt_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="30dp"
+                android:theme="@style/Button.Accent"
+                android:padding="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
                 android:text="@string/login" />
 
         </LinearLayout>

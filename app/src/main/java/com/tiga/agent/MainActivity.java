@@ -1,12 +1,16 @@
 package com.tiga.agent;
 
-import android.app.Fragment;
+
+
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +18,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.tiga.fragment.AccountFragment;
+import com.tiga.fragment.BuyFragment;
 import com.tiga.fragment.StockFragment;
 import com.tiga.menu.DrawerAdapter;
 import com.tiga.menu.DrawerItem;
@@ -75,11 +80,11 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
     @Override
     public void onItemSelected(int position) {
-        Fragment selectedScreen = AccountFragment.createFor(screenTitles[position]);
+        Fragment selectedScreen = BuyFragment.createFor(screenTitles[position]);
         switch (position) {
             case MENU_1: {
-                toolbar.setTitle("Menu 1");
-                selectedScreen = AccountFragment.createFor(screenTitles[position]);
+                toolbar.setTitle("BELI");
+                selectedScreen = BuyFragment.createFor(screenTitles[position]);
                 break;
             }
             case MENU_2: {
@@ -88,12 +93,12 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 break;
             }
             case MENU_3: {
-                toolbar.setTitle("Menu 3");
+                toolbar.setTitle("RIWAYAT");
                 selectedScreen = AccountFragment.createFor(screenTitles[position]);
                 break;
             }
             case MENU_4: {
-                toolbar.setTitle("Menu 4");
+                toolbar.setTitle("KELUAR");
                 selectedScreen = AccountFragment.createFor(screenTitles[position]);
                 break;
             }
@@ -111,9 +116,10 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     }
 
     private void showFragment(Fragment fragment) {
-        getFragmentManager().beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container, fragment);
+        fragmentTransaction.commit();
     }
 
     private DrawerItem createItemFor(int position) {

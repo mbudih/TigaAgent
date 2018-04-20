@@ -25,4 +25,7 @@
 
     <color name="textColorPrimary">#212121</color>
     <color name="textColorSecondary">#757575</color>
+
+    <color name="c_white_transparency">#99FFFFFF</color>
+    <color name="c_black_transparency">#99000000</color>
 </resources>

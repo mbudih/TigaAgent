@@ -33,8 +33,8 @@ public class BuyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_buy, container, false);
         viewPager = (ViewPager) v.findViewById(R.id.view_pager);
-        setupViewPager();
         tabLayout = (TabLayout) v.findViewById(R.id.tab_buy);
+        setupViewPager();
         tabLayout.setupWithViewPager(viewPager);
 
         return v;

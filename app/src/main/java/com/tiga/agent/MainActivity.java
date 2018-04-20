@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         switch (position) {
             case MENU_1: {
                 toolbar.setTitle("BELI");
-                selectedScreen = BuyFragment.createFor(screenTitles[position]);
+//                selectedScreen = BuyFragment.createFor(screenTitles[position]);
                 break;
             }
             case MENU_2: {

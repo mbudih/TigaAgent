@@ -10,6 +10,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class FirebaseDB {
     //    public static final String  = "";
     public static final String REF_INVOICES = "STOK_REQUEST";
+    public static final String REF_PRODUCT = "ITEM";
 
     private static FirebaseDB firebaseDB;
     private FirebaseDatabase fDB;

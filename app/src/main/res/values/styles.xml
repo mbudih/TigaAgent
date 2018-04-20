@@ -6,16 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-        <!-- Custom button style-->
-        <item name="android:buttonStyle">@style/celuk_button</item>
-        <item name="colorControlHighlight">@color/c_black</item>
-        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:fitsSystemWindows">true</item>
     </style>
 
-    <style name="ButtonStyle" parent="Base.Widget.AppCompat.Button.Colored">
-        <item name="colorButtonNormal">@color/colorAccent</item>
-    </style>
+    <!--<style name="ButtonStyle" parent="Base.Widget.AppCompat.Button.Colored">-->
+        <!--<item name="colorButtonNormal">@color/colorAccent</item>-->
+    <!--</style>-->
 
     <style name="TextLabel" parent="TextAppearance.AppCompat">
         <!-- Hint color and label color in FALSE state -->

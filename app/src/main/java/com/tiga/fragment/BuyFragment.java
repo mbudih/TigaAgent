@@ -16,6 +16,8 @@ import com.tiga.utils.ViewPagerAdapter;
 public class BuyFragment extends Fragment {
 
     private static final String EXTRA_TEXT = "text";
+    private static final boolean SUBSIDI = true;
+    private static final boolean NON_SUBSIDI = false;
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
@@ -32,21 +34,28 @@ public class BuyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_buy, container, false);
+
         viewPager = (ViewPager) v.findViewById(R.id.view_pager);
         tabLayout = (TabLayout) v.findViewById(R.id.tab_buy);
-        setupViewPager();
-        tabLayout.setupWithViewPager(viewPager);
 
         return v;
     }
 
+    @Override
+    public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
+        setupViewPager();
+        tabLayout.setupWithViewPager(viewPager, true);
+    }
+
     public void setupViewPager() {
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getFragmentManager());
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getChildFragmentManager());
 
         BuyContentFragment buyContentFragment = new BuyContentFragment();
+        buyContentFragment.setSubsidiStatus(SUBSIDI);
         viewPagerAdapter.addFragment(buyContentFragment, getString(R.string.beli_subsidi));
 
         buyContentFragment = new BuyContentFragment();
+        buyContentFragment.setSubsidiStatus(NON_SUBSIDI);
         viewPagerAdapter.addFragment(buyContentFragment, getString(R.string.beli_non_subsidi));
 
         viewPager.setAdapter(viewPagerAdapter);

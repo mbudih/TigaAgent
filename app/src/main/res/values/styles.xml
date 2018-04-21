@@ -10,7 +10,7 @@
     </style>
 
     <!--<style name="ButtonStyle" parent="Base.Widget.AppCompat.Button.Colored">-->
-        <!--<item name="colorButtonNormal">@color/colorAccent</item>-->
+    <!--<item name="colorButtonNormal">@color/colorAccent</item>-->
     <!--</style>-->
 
     <style name="TextLabel" parent="TextAppearance.AppCompat">
@@ -33,9 +33,23 @@
         <item name="colorButtonNormal">@color/colorPrimary</item>
     </style>
 
+    <style name="Button.PrimaryDark" parent="AppTheme">
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Button.Red" parent="AppTheme">
+        <item name="colorControlHighlight">@color/c_red_soft</item>
+        <item name="colorButtonNormal">@color/c_red</item>
+    </style>
+
     <style name="Button.Accent" parent="AppTheme">
         <item name="colorControlHighlight">@color/c_white</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Tepat Tiga</string>
-    <string name="app_subname">Agent</string>
+    <string name="app_subname">Pangkalan</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -8,7 +8,39 @@
     <string name="balance_currency">$</string>
     <string name="balance_amount">532.8</string>
 
+    <string name="sp1">SP1</string>
+    <string name="sp2">SP2</string>
+    <string name="sp3">SP3</string>
 
-    <string name="beli_subsidi">SUBSIDI</string>
-    <string name="beli_non_subsidi">NON-SUBSIDI</string>
+    <string name="field_name">Nama</string>
+    <string name="field_addrs">Alamat</string>
+    <string name="field_noid">No KTP</string>
+
+    <string name="beli_subsidi">Beli Subsidi</string>
+    <string name="beli_non_subsidi">Beli Non-Subsidi</string>
+
+
+    <string name="title_subsidi">SUBSIDI</string>
+    <string name="title_non_subsidi">NON-SUBSIDI</string>
+    <string name="title_detail_trk">Detail Transaksi</string>
+    <string name="title_trx">Transaksi</string>
+
+    <string name="btn_verifikasi">Verifikasi</string>
+    <string name="btn_bayar">Bayar</string>
+    <string name="btn_kembali">Kembali</string>
+
+    <string name="note_tersedia">Tersedia :  </string>
+    <string name="note_status">Status : </string>
+    <string name="note_pembelian">Pembelian : </string>
+    <string name="note_filter_kks">Pembelian Gas Subsidi 3 Kg hanya untuk penerima Kartu Keluarga Sehat (KKS).</string>
+    <string name="note_perhatian">Perhatian !</string>
+    <string name="note_nomor_kks">Nomor KKS</string>
+    <string name="note_input_nomor_kks">Masukkan Nomor KKS</string>
+    <string name="note_trx_success">Transaksi Berhasil</string>
+
+    <string name="item_elpiji_3kg">Elpiji Gas 3 KG</string>
+
+    <string name="message_kksno_mandatory">Nomor KKS Wajib diisi</string>
+
+    <string name="dummy_kks1_name">SUPARDI</string>
 </resources>

@@ -2,6 +2,7 @@ package com.tiga.firebase;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.tiga.firebase.model.penjualan.Penjualan;
 
 /**
  * Created by adikwidiasmono on 20/11/17.
@@ -11,6 +12,8 @@ public class FirebaseDB {
     //    public static final String  = "";
     public static final String REF_INVOICES = "STOK_REQUEST";
     public static final String REF_PRODUCT = "ITEM";
+    public static final String REF_KKS = "KKS";
+    public static final String REF_PENJUALAN = "PENJUALAN";
 
     private static FirebaseDB firebaseDB;
     private FirebaseDatabase fDB;
@@ -32,13 +35,13 @@ public class FirebaseDB {
         return fDB.getReference(refName);
     }
 
-//    public void addAllergy(Allergy allergy) {
-//        DatabaseReference fRef = fDB.getReference(REF_ALLERGYS);
-//
-//        String allergyId = fRef.push().getKey();
-//        allergy.setAllergyId(allergyId);
-//        fRef.child(allergyId).setValue(allergy);
-//    }
+    public void addPenjualan(Penjualan penjualan) {
+        DatabaseReference fRef = fDB.getReference(REF_PENJUALAN);
+
+        String penjualanId = fRef.push().getKey();
+        penjualan.setPenjualanId(penjualanId);
+        fRef.child(penjualanId).setValue(penjualan);
+    }
 //
 //    public void addTimeline(TimelineContent content) {
 //        DatabaseReference fRef = fDB.getReference(REF_TIMELINE_MED_RECS);

@@ -5,14 +5,14 @@
         <item>STOK</item>
         <item>RIWAYAT</item>
         <item>KELUAR</item>
-        <item>Menu_5</item>
+        <!--<item>Menu_5</item>-->
     </string-array>
 
     <array name="ld_activityScreenIcons">
-        <item>@drawable/ic_home_32dp</item>
-        <item>@drawable/ic_home_32dp</item>
-        <item>@drawable/ic_home_32dp</item>
-        <item>@drawable/ic_home_32dp</item>
-        <item>@drawable/ic_home_32dp</item>
+        <item>@drawable/gas</item>
+        <item>@drawable/boxes</item>
+        <item>@drawable/history</item>
+        <item>@drawable/logout</item>
+        <!--<item>@drawable/ic_home_32dp</item>-->
     </array>
 </resources>

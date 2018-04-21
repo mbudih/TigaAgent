@@ -20,6 +20,17 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
+        <activity
+            android:name="com.tiga.beli.subsidi.SubsidiActivy"
+            android:label="@string/beli_subsidi" />
+        <activity
+            android:name="com.tiga.beli.nonsubsidi.NonSubsidiActivity"
+            android:label="@string/beli_non_subsidi" />
+        <activity
+            android:name="com.tiga.beli.subsidi.SubsidiKKSActivity"
+            android:label="@string/beli_subsidi" />
+        <activity android:name="com.tiga.beli.subsidi.SubsidiTrResultActivity"
+            android:label="@string/title_detail_trk"/>
     </application>
 
 </manifest>

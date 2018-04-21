@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tiga.beli.subsidi.SubsidiActivy">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_grey"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@color/c_white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c_red"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/note_perhatian"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c_red"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:text="@string/note_filter_kks"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:padding="20dp"
+                    android:src="@drawable/elpiji_3kg"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/c_black"
+                    android:text="@string/item_elpiji_3kg"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/c_red"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/c_black"
+            android:layout_marginBottom="10dp"
+            android:text="@string/note_input_nomor_kks"/>
+        <EditText
+            android:id="@+id/et_kks_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="@string/note_nomor_kks"/>
+
+        <Button
+            android:id="@+id/bt_verifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:theme="@style/Button.Red"
+            android:textColor="@color/c_white"
+            android:text="@string/btn_verifikasi"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+    </LinearLayout>
+
+        <View
+            android:id="@+id/bt_magic"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_grey"/>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

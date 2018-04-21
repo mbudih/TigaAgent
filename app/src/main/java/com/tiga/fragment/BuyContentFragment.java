@@ -1,6 +1,7 @@
 package com.tiga.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.Query;
 import com.tiga.agent.R;
+import com.tiga.beli.nonsubsidi.NonSubsidiActivity;
+import com.tiga.beli.subsidi.SubsidiActivy;
 import com.tiga.firebase.FirebaseAdapterProduct;
 import com.tiga.firebase.FirebaseDB;
 import com.tiga.firebase.model.product.Product;
@@ -73,6 +76,14 @@ public class BuyContentFragment extends Fragment
 
     @Override
     public void onProductClicked(int position, Product product) {
-        Toast.makeText(getActivity().getApplicationContext(), product.getName(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        if (getSubsidiStatus()){
+            //Go to Subsidi Activity
+            intent.setClass(getActivity().getApplicationContext(), SubsidiActivy.class);
+        }else{
+            //Go to Non Subsidi Activity
+            intent.setClass(getActivity().getApplicationContext(), NonSubsidiActivity.class);
+        }
+        startActivity(intent);
     }
 }

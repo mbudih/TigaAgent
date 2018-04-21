@@ -1,6 +1,8 @@
 package com.tiga.firebase.model.product;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
     private String name;
     private boolean is_subsidi;
     private double price;

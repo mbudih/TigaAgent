@@ -2,6 +2,7 @@ package com.tiga.agent;
 
 
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     private static final int MENU_2 = 1;
     private static final int MENU_3 = 2;
     private static final int MENU_4 = 3;
-    private static final int MENU_5 = 4;
+//    private static final int MENU_5 = 4;
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
@@ -65,8 +66,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 createItemFor(MENU_1).setChecked(true),
                 createItemFor(MENU_2),
                 createItemFor(MENU_3),
-                createItemFor(MENU_4),
-                createItemFor(MENU_5)
+                createItemFor(MENU_4)
         ));
         adapter.setListener(this);
 
@@ -98,15 +98,15 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 break;
             }
             case MENU_4: {
-                toolbar.setTitle("KELUAR");
-                selectedScreen = AccountFragment.createFor(screenTitles[position]);
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
                 break;
             }
-            case MENU_5: {
-                toolbar.setTitle("Menu 5");
-                selectedScreen = AccountFragment.createFor(screenTitles[position]);
-                break;
-            }
+//            case MENU_5: {
+//                toolbar.setTitle("Menu 5");
+//                selectedScreen = AccountFragment.createFor(screenTitles[position]);
+//                break;
+//            }
             default: {
                 break;
             }

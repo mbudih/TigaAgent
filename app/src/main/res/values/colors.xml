@@ -11,17 +11,21 @@
     <!--<color name="c_blue">#1D9DF2</color>-->
     <!--<color name="c_blue_dark">#0A4C64</color>-->
     <!--<color name="c_blue">#3BA1A7</color>-->
+    <color name="c_red">#ff0000</color>
+    <color name="c_red_soft">#e83641</color>
     <color name="c_blue_soft">#fce6e7</color>
     <color name="c_blue_dark">#e83641</color>
     <color name="c_blue">#f28e94</color>
-    <color name="c_yellow">#FDCD3F</color>
+    <color name="c_yellow">#fff200</color>
     <color name="c_yellow_soft">#FEDC38</color>
     <color name="c_yellow_dark">#FDB60D</color>
-    <color name="c_green">#259b24</color>
-    <color name="c_green_dark">#154515</color>
-    <color name="c_green_soft">#abdb5c</color>
+    <color name="c_orange">#ff6a00</color>9
+    <color name="c_green">#75851d</color>
+    <color name="c_green_dark">#3e460f</color>
+    <color name="c_green_soft">#c9dd5e</color>
 
     <color name="c_grey">#F4F4F4</color>
+    <color name="c_grey_2">#d1cfcf</color>
 
     <color name="textColorPrimary">#212121</color>
     <color name="textColorSecondary">#757575</color>

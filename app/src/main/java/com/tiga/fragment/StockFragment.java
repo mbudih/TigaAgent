@@ -69,8 +69,8 @@ public class StockFragment extends Fragment
     @Override
     public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         Query query = FirebaseDB.init().getDBReference()
-                .child(FirebaseDB.REF_INVOICES);
-//                .orderByChild("CreateDate").startAt(-1 * new Date().getTime());
+                .child(FirebaseDB.REF_INVOICES)
+                .orderByChild("CreateDate").startAt(-1 * new Date().getTime());
 
         FirebaseRecyclerOptions<Invoice> options = new FirebaseRecyclerOptions.Builder<Invoice>()
                 .setQuery(query, Invoice.class)

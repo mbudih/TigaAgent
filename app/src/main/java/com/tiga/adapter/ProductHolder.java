@@ -9,6 +9,7 @@ import com.squareup.picasso.Picasso;
 import com.tiga.agent.R;
 import com.tiga.firebase.model.product.Product;
 import com.tiga.firebase.model.product.ProductBuy;
+import com.tiga.utils.AppUtils;
 
 public class ProductHolder extends RecyclerView.ViewHolder {
 
@@ -27,9 +28,9 @@ public class ProductHolder extends RecyclerView.ViewHolder {
 
     public void setValue(ProductBuy product){
         tvName.setText(product.getProduct().getName());
-        tvPrice.setText(String.valueOf(product.getProduct().getPrice()));
+        tvPrice.setText(AppUtils.getIDR(product.getProduct().getPrice()));
         tvQty.setText(String.valueOf(product.getQty()));
-        tvTotal.setText(String.valueOf(product.getTotal()));
+        tvTotal.setText(AppUtils.getIDR(product.getTotal()));
 
         Picasso.with(imageView.getContext())
                 .load(product.getProduct().getImg_url())

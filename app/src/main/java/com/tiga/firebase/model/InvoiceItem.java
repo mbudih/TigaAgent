@@ -1,10 +1,12 @@
 package com.tiga.firebase.model;
 
+import java.io.Serializable;
+
 /**
  * Created by adikwidiasmono on 16/04/18.
  */
 
-public class InvoiceItem {
+public class InvoiceItem implements Serializable {
     private String ImageURL;
     private String Product;
     private Long Quantity;

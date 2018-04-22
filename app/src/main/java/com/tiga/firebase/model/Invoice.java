@@ -1,12 +1,13 @@
 package com.tiga.firebase.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by adikwidiasmono on 16/04/18.
  */
 
-public class Invoice {
+public class Invoice implements Serializable {
     private String AgentId;
     private Long CreateDate;
     private String InvoiceId;

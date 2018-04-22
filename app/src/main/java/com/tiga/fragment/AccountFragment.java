@@ -29,6 +29,7 @@ import com.tiga.firebase.FirebaseDB;
 import com.tiga.firebase.model.penjualan.Penjualan;
 import com.tiga.firebase.model.penjualan.TransactionItem;
 import com.tiga.riwayat.DetailRiwayatActivity;
+import com.tiga.utils.AppUtils;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -112,7 +113,7 @@ public class AccountFragment extends Fragment {
                             .error(R.drawable.ic_error)
                             .into(holder.ivItem);
 
-                    sb.append(ti.getQuantity() + " unit " + ti.getProduct() + " Rp " + ti.getPrice()+"\n");
+                    sb.append(ti.getQuantity() + " unit " + ti.getProduct() + " Rp " + AppUtils.getIDR(ti.getPrice())+"\n");
                 }
                 holder.tvTransDetail.setText(sb.toString());
 

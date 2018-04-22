@@ -87,7 +87,7 @@ public class AccountFragment extends Fragment {
     @Override
     public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         Query query = FirebaseDatabase.getInstance()
-                .getReference().child(FirebaseDB.REF_PENJUALAN);
+                .getReference().child(FirebaseDB.REF_PENJUALAN).orderByChild("transactionDate");
 
         FirebaseRecyclerOptions options = new FirebaseRecyclerOptions
                 .Builder<Penjualan>()
@@ -123,6 +123,10 @@ public class AccountFragment extends Fragment {
                 holder.tvTransDetail.setText(sb.toString());
 
                 if (penjualan.getKKSOwner()!=null) {
+                    holder.tvItemType.setText(getResources().getString(R.string.title_subsidi));
+                } else holder.tvItemType.setText(getResources().getString(R.string.title_non_subsidi));
+
+                if (!penjualan.getKKSNo().toString().equals("0")) {
                     holder.tvItemType.setText(getResources().getString(R.string.title_subsidi));
                 } else holder.tvItemType.setText(getResources().getString(R.string.title_non_subsidi));
 

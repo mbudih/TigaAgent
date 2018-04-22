@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tiga.adapter.ItemAdapter;
@@ -25,6 +26,7 @@ public class SubsidiTrResultActivity extends AppCompatActivity {
     Button button;
     Penjualan penjualan;
     TextView tvTanggal, tvName, tvKKS, tvTotal;
+    LinearLayout lyNo, lyName;
 
     RecyclerView recyclerView;
 
@@ -40,6 +42,8 @@ public class SubsidiTrResultActivity extends AppCompatActivity {
         tvName = (TextView) findViewById(R.id.trx_name);
         tvKKS = (TextView) findViewById(R.id.trx_kksno);
         tvTotal = (TextView) findViewById(R.id.total_detail);
+        lyName = (LinearLayout) findViewById(R.id.ly_kksname);
+        lyNo = (LinearLayout) findViewById(R.id.ly_kksno);
 
         penjualan = new Penjualan();
         penjualan = (Penjualan) getIntent().getSerializableExtra("PENJUALAN");
@@ -59,6 +63,10 @@ public class SubsidiTrResultActivity extends AppCompatActivity {
         for (TransactionItem transactionItem: penjualan.getItems()){
             double sub = transactionItem.getPrice()*transactionItem.getQuantity();
             total = total + sub;
+        }
+        if (penjualan.getKKSNo().toString().equals("0")){
+            lyNo.setVisibility(View.GONE);
+            lyName.setVisibility(View.GONE);
         }
         tvKKS.setText(penjualan.getKKSNo().toString());
         tvName.setText(penjualan.getKKSOwner());

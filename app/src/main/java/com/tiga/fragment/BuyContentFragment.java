@@ -75,6 +75,11 @@ public class BuyContentFragment extends Fragment
     }
 
     @Override
+    public void onProductNonClicked(int position, Product product) {
+
+    }
+
+    @Override
     public void onProductClicked(int position, Product product) {
         Intent intent = new Intent();
         if (getSubsidiStatus()){

@@ -12,30 +12,36 @@
     <LinearLayout
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
+
         <ImageView
             android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="24dp"
-            android:src="@drawable/tepat3_2"
-            android:layout_height="60dp"/>
+            android:src="@drawable/tepat3_2" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:padding="5dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="Pangkalan 03"/>
-            <TextView
+                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
+                android:text="Pangkalan 03"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Area 001"/>
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="-8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Area 001"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
     </LinearLayout>
 
@@ -50,36 +56,38 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:gravity="center"
-            android:padding="5dp"
-            android:textStyle="bold"
-            android:textColor="@color/c_white"
+            android:layout_weight="1"
             android:background="@color/c_yellow_soft"
-            android:text="@string/sp1" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             android:gravity="center"
             android:padding="5dp"
-            android:textStyle="bold"
+            android:text="@string/sp1"
             android:textColor="@color/c_white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
             android:background="@color/c_orange"
-            android:text="@string/sp2" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             android:gravity="center"
             android:padding="5dp"
+            android:text="@string/sp2"
             android:textColor="@color/c_white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
             android:background="@color/c_grey_2"
-            android:text="@string/sp3" />
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/sp3"
+            android:textColor="@color/c_white" />
     </LinearLayout>
 
     <Space

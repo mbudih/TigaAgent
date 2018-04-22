@@ -36,16 +36,17 @@ public class StokActivity extends AppCompatActivity {
 
         StringBuilder sb = new StringBuilder();
         int i = 0;
+        sb.append("Invoice items : " + "\n");
         for (InvoiceItem ti : invoice.getItems()) {
             i++;
-            sb.append(i+". "+ti.getProduct() + " - " + ti.getQuantity() + " Unit \n");
+            sb.append(i + ". " + ti.getProduct() + " - " + ti.getQuantity() + " Unit \n");
         }
         tvProductList.setText(sb.toString());
         tvInv.setText(invoice.getInvoiceId());
 
 
         TrackingAdapter itemAdapter = new TrackingAdapter(invoice.getTracking());
-        recyclerViewTracking.swapAdapter(itemAdapter,false);
+        recyclerViewTracking.swapAdapter(itemAdapter, false);
 
         // Set layout manager to position the items
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());

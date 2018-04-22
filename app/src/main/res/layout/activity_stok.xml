@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.tiga.stok.StokActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,48 +24,72 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.AppBarLayout>
-        <TextView
-            android:id="@+id/tv_invoice"
-            android:padding="5dp"
-            android:textColor="@color/c_black"
-            android:textStyle="bold"
-            android:textSize="20sp"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_invoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INV - 001"
+                android:textColor="@color/c_green_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/c_green_dark" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="8dp">
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:weightSum="1">
+
                     <ImageView
-                        android:layout_margin="10dp"
                         android:layout_width="0dp"
-                        android:paddingTop="10dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/all"
-                        android:layout_weight="0.3"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/all" />
+
                     <TextView
                         android:id="@+id/tv_tracking_item"
                         android:layout_width="0dp"
-                        android:layout_marginTop="15dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/c_black"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.7"/>
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="0.7"
+                        android:textColor="@color/c_black"
+                        android:textSize="16sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_tracking"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
         </LinearLayout>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

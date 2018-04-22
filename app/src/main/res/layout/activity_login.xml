@@ -7,55 +7,52 @@
     android:background="@color/colorPrimary"
     tools:context=".LoginActivity">
 
-
-
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_centerInParent="true"
+        android:layout_gravity="center"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         card_view:cardCornerRadius="4dp">
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/img_3"
                 android:layout_width="match_parent"
-                android:layout_marginTop="50dp"
                 android:layout_height="80dp"
-                android:src="@drawable/tepat3_2"/>
+                android:layout_marginTop="50dp"
+                android:src="@drawable/tepat3_2" />
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/img_3"
-                android:gravity="center"
                 android:layout_centerHorizontal="true"
+                android:gravity="center"
                 android:text="@string/app_name"
-                android:textStyle="bold|italic"
                 android:textColor="@color/colorPrimary"
-                android:textSize="26sp" />
+                android:textSize="26sp"
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/subtitle"
                 android:layout_width="match_parent"
-                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
                 android:text="@string/app_subname"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:layout_marginBottom="40dp"/>
+                android:textSize="16sp" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/til_username"
@@ -68,8 +65,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    android:text="user.tiga@mail.com"
                     android:inputType="textEmailAddress"
+                    android:text="user.tiga@mail.com"
                     android:textColor="@color/colorPrimary" />
             </android.support.design.widget.TextInputLayout>
 
@@ -85,8 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    android:text="password"
                     android:inputType="textPassword"
+                    android:text="password"
                     android:textColor="@color/colorPrimary" />
             </android.support.design.widget.TextInputLayout>
 
@@ -95,11 +92,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:theme="@style/Button.Primary"
                 android:padding="20dp"
+                android:text="@string/login"
                 android:textColor="@color/c_white"
                 android:textStyle="bold"
-                android:text="@string/login" />
+                android:theme="@style/Button.Primary" />
 
         </LinearLayout>
 
@@ -109,9 +106,9 @@
         android:id="@+id/pb_login"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:layout_below="@+id/card_view"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:background="@color/c_white" />
 
     <TextView

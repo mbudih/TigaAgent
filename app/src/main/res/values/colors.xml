@@ -13,7 +13,7 @@
     <!--<color name="c_blue">#3BA1A7</color>-->
     <color name="c_red">#ff0000</color>
     <color name="c_red_soft">#e83641</color>
-    <color name="c_blue_soft">#fce6e7</color>
+    <color name="c_blue_soft">@color/c_green_soft</color>
     <color name="c_blue_dark">#e83641</color>
     <color name="c_blue">#f28e94</color>
     <color name="c_yellow">#fff200</color>

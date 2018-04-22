@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import com.tiga.agent.R;
 import com.tiga.firebase.model.Invoice;
 import com.tiga.firebase.model.InvoiceItem;
+import com.tiga.utils.CircleTransform;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -67,6 +68,7 @@ public class FirebaseAdapterInvoice extends
 
         Picasso.with(activity)
                 .load(invoice.getItems().get(0).getImageURL())
+                .transform(new CircleTransform())
                 .placeholder(R.drawable.ic_home_32dp)
                 .error(R.drawable.ic_home_32dp)
                 .into(viewHolder.ivInvoice);
@@ -76,6 +78,7 @@ public class FirebaseAdapterInvoice extends
 
         StringBuilder sbIt = new StringBuilder();
         int i = 0;
+        sbIt.append("Invoice items : " + "\n");
         for (InvoiceItem it : invoice.getItems()) {
             i++;
             sbIt.append(i + ". " + it.getProduct() + " : " + it.getQuantity() + " unit" + "\n");

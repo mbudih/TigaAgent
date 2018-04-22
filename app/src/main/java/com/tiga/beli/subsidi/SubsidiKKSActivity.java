@@ -88,8 +88,6 @@ public class SubsidiKKSActivity extends AppCompatActivity {
                 dialog.setMessage("Memproses...");
                 dialog.show();
 
-
-
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     public void run() {

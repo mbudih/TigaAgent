@@ -52,7 +52,7 @@
                     android:id="@+id/available_stock"
                     android:layout_width="wrap_content"
                     android:textColor="@color/c_black"
-                    android:text=" 0"
+                    android:text=" 10"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <Button

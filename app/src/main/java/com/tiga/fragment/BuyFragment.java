@@ -54,9 +54,9 @@ public class BuyFragment extends Fragment {
         buyContentFragment.setSubsidiStatus(SUBSIDI);
         viewPagerAdapter.addFragment(buyContentFragment, getString(R.string.title_subsidi));
 
-        buyContentFragment = new BuyContentFragment();
-        buyContentFragment.setSubsidiStatus(NON_SUBSIDI);
-        viewPagerAdapter.addFragment(buyContentFragment, getString(R.string.title_non_subsidi));
+        BuyNonContentFragment buyNonContentFragment = new BuyNonContentFragment();
+        buyNonContentFragment.setSubsidiStatus(NON_SUBSIDI);
+        viewPagerAdapter.addFragment(buyNonContentFragment, getString(R.string.title_non_subsidi));
 
         viewPager.setAdapter(viewPagerAdapter);
     }

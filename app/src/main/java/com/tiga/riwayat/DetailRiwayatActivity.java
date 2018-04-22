@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tiga.adapter.ItemAdapter;
@@ -27,6 +28,7 @@ public class DetailRiwayatActivity extends AppCompatActivity {
     TextView tvTanggal, tvName, tvKKS, tvTotal;
 
     RecyclerView recyclerView;
+    LinearLayout lyNo, lyName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class DetailRiwayatActivity extends AppCompatActivity {
         tvName = (TextView) findViewById(R.id.trx_name);
         tvKKS = (TextView) findViewById(R.id.trx_kksno);
         tvTotal = (TextView) findViewById(R.id.total_detail);
+        lyName = (LinearLayout) findViewById(R.id.ly_kksname);
+        lyNo = (LinearLayout) findViewById(R.id.ly_kksno);
 
         penjualan = new Penjualan();
         penjualan = (Penjualan) getIntent().getSerializableExtra("PENJUALAN");
@@ -55,6 +59,11 @@ public class DetailRiwayatActivity extends AppCompatActivity {
         mLayoutManager.setStackFromEnd(true);
 
         recyclerView.setLayoutManager(mLayoutManager);
+
+        if (penjualan.getKKSNo().toString().equals("0")){
+            lyNo.setVisibility(View.GONE);
+            lyName.setVisibility(View.GONE);
+        }
 
         double total = 0;
         for (TransactionItem transactionItem: penjualan.getItems()){

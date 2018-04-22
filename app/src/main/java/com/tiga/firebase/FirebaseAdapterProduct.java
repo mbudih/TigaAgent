@@ -63,9 +63,20 @@ public class FirebaseAdapterProduct extends
     }
 
     private void applyClickEvents(ViewHolder holder, final int position, final Product product) {
-        holder.btBuy.setOnClickListener(new View.OnClickListener() {
+        if (product.isIs_subsidi()){
+            holder.btBuy.setVisibility(View.VISIBLE);
+        }else {
+            holder.btBuy.setVisibility(View.GONE);
+        }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                listener.onProductNonClicked(position, product);
+            }
+        });
+        holder.btBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 listener.onProductClicked(position, product);
             }
         });
@@ -73,5 +84,6 @@ public class FirebaseAdapterProduct extends
 
     public interface FirebaseAdapterInvoiceListener {
         void onProductClicked(int position, Product product);
+        void onProductNonClicked(int position, Product product);
     }
 }

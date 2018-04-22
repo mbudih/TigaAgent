@@ -29,8 +29,11 @@
         <activity
             android:name="com.tiga.beli.subsidi.SubsidiKKSActivity"
             android:label="@string/beli_subsidi" />
-        <activity android:name="com.tiga.beli.subsidi.SubsidiTrResultActivity"
-            android:label="@string/title_detail_trk"/>
+        <activity
+            android:name="com.tiga.beli.subsidi.SubsidiTrResultActivity"
+            android:label="@string/title_detail_trk" />
+        <activity android:name="com.tiga.riwayat.DetailRiwayatActivity" />
+        <activity android:name="com.tiga.stok.StokActivity"></activity>
     </application>
 
 </manifest>

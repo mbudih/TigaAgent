@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -27,6 +28,7 @@ import com.tiga.agent.R;
 import com.tiga.firebase.FirebaseDB;
 import com.tiga.firebase.model.penjualan.Penjualan;
 import com.tiga.firebase.model.penjualan.TransactionItem;
+import com.tiga.riwayat.DetailRiwayatActivity;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -46,6 +48,7 @@ public class AccountFragment extends Fragment {
     private int year, month, day;
     private DatePicker datePicker;
     private Calendar calendar;
+    LinearLayout linearLayout;
 
 
     public static AccountFragment createFor(String text) {
@@ -100,7 +103,7 @@ public class AccountFragment extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(ViewHolder holder, int position, Penjualan penjualan) {
+            protected void onBindViewHolder(ViewHolder holder, int position, final Penjualan penjualan) {
                 StringBuilder sb = new StringBuilder();
                 for (TransactionItem ti : penjualan.getItems()) {
                     Picasso.with(getActivity())
@@ -122,6 +125,15 @@ public class AccountFragment extends Fragment {
                     holder.tvItemType.setText(getResources().getString(R.string.title_subsidi));
                 } else holder.tvItemType.setText(getResources().getString(R.string.title_non_subsidi));
 
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent();
+                        intent.putExtra("PENJUALAN", penjualan);
+                        intent.setClass(getActivity().getApplicationContext(), DetailRiwayatActivity.class);
+                        startActivity(intent);
+                    }
+                });
             }
         };
 
@@ -134,13 +146,14 @@ public class AccountFragment extends Fragment {
         mLayoutManager.setStackFromEnd(true);
 
         recyclerView.setLayoutManager(mLayoutManager);
+
+
     }
 
 
     private class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvItemType, tvTransDetail, tvTransDate;
         private ImageView ivItem;
-
         private EditText etInputDate;
 
         public ViewHolder(View itemView) {

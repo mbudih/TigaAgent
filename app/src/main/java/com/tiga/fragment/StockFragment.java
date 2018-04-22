@@ -20,6 +20,7 @@ import com.tiga.agent.R;
 import com.tiga.firebase.FirebaseAdapterInvoice;
 import com.tiga.firebase.FirebaseDB;
 import com.tiga.firebase.model.Invoice;
+import com.tiga.stok.StokActivity;
 
 import java.util.Date;
 
@@ -90,7 +91,10 @@ public class StockFragment extends Fragment
 
     @Override
     public void onInvoiceClicked(int position, Invoice invoice) {
-        Toast.makeText(getActivity(), invoice.getInvoiceId(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(getActivity().getApplicationContext(), StokActivity.class);
+        intent.putExtra("INVOICE", invoice);
+        startActivity(intent);
     }
 
 }

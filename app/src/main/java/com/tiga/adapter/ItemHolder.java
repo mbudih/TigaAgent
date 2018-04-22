@@ -9,6 +9,7 @@ import com.squareup.picasso.Picasso;
 import com.tiga.agent.R;
 import com.tiga.firebase.model.penjualan.TransactionItem;
 import com.tiga.firebase.model.product.ProductBuy;
+import com.tiga.utils.AppUtils;
 
 public class ItemHolder extends RecyclerView.ViewHolder {
 
@@ -27,10 +28,10 @@ public class ItemHolder extends RecyclerView.ViewHolder {
 
     public void setValue(TransactionItem transactionItem){
         tvName.setText(transactionItem.getProduct());
-        tvPrice.setText(String.valueOf(transactionItem.getPrice()));
+        tvPrice.setText(AppUtils.getIDR(transactionItem.getPrice()));
         tvQty.setText(String.valueOf(transactionItem.getQuantity()));
         double total = transactionItem.getPrice()*transactionItem.getQuantity();
-        tvTotal.setText(String.valueOf(total));
+        tvTotal.setText(AppUtils.getIDR(total));
 
         Picasso.with(imageView.getContext())
                 .load(transactionItem.getImageURL())

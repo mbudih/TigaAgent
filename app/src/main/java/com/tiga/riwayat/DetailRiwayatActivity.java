@@ -16,6 +16,7 @@ import com.tiga.agent.MainActivity;
 import com.tiga.agent.R;
 import com.tiga.firebase.model.penjualan.Penjualan;
 import com.tiga.firebase.model.penjualan.TransactionItem;
+import com.tiga.utils.AppUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -64,7 +65,7 @@ public class DetailRiwayatActivity extends AppCompatActivity {
         tvName.setText(penjualan.getKKSOwner());
         tvTanggal.setText(new SimpleDateFormat("dd MMMM yyyy")
                 .format(new Date().getTime()));
-        tvTotal.setText(String.valueOf(total));
+        tvTotal.setText(AppUtils.getIDR(total));
 
     }
 

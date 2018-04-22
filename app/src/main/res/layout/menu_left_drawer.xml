@@ -55,6 +55,8 @@
             android:layout_marginTop="6dp"
             android:gravity="center"
             android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/c_white"
             android:background="@color/c_yellow_soft"
             android:text="@string/sp1" />
         <TextView
@@ -64,6 +66,7 @@
             android:layout_marginTop="6dp"
             android:gravity="center"
             android:padding="5dp"
+            android:textStyle="bold"
             android:textColor="@color/c_white"
             android:background="@color/c_orange"
             android:text="@string/sp2" />
@@ -75,7 +78,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:textColor="@color/c_white"
-            android:background="@color/c_red"
+            android:background="@color/c_grey_2"
             android:text="@string/sp3" />
     </LinearLayout>
 
